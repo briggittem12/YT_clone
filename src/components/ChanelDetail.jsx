@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
-import { ChannelCard, VideoCard } from './'
+import { ChannelCard, Videos } from './'
 
 
 const ChanelDetail = () => {
@@ -33,6 +33,12 @@ const ChanelDetail = () => {
           height: '300px'
         }}/>
         <ChannelCard channelDetail={channelDetail} marginTop='-93px' />
+      </Box>
+
+      <Box display='flex' p='2'>
+        <Box sx={{ mr: { sm: '100px' }}}>
+          <Videos videos={videos}/>
+        </Box>
       </Box>
     </Box>
   )
